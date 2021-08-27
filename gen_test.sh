@@ -1,1 +1,1 @@
-echo "Something else wrong"
+echo "Something too wrong"
