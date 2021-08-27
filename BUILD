@@ -1,3 +1,4 @@
+load("//:macros.bzl", "create_genrule")
 py_test(
     name = "compare_files",
     srcs = ["compare_files.py"],
@@ -7,10 +8,10 @@ py_test(
     ],
 )
 
-genrule(
+create_genrule(
     name = "gen_test",
     srcs = [],
-    outs = ["test.txt"],
+    out = ["test.txt"],
     cmd = "$(location gen_test.sh) > \"$@\"",
     exec_tools = [":gen_test.sh"],
 )
