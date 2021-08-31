@@ -1,1 +1,1 @@
-echo "Something too wrong"
+echo "Generated from gen_test.sh"
